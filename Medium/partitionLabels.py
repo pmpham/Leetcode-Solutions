@@ -2,17 +2,12 @@
 # https://leetcode.com/problems/partition-labels/
 
 def partitionLabels(self, s: str) -> List[int]:
-        left = 0
-        right = 0
+        left =right = 0
         res = []
+        lastIdx = {x:i for i,x in enumerate(s)}
         for i,x in enumerate(s):
-            if i<=right:
-                if len(s)-1-s[::-1].index(x)>right:
-                    right = len(s)-1-s[::-1].index(x)
-            
-            else:
+            right = max(lastIdx[x],right)
+            if i == right:
                 res.append(right-left+1)
-                right = len(s)-1-s[::-1].index(x)
-                left = i
-        res.append(right-left+1)
+                left = i+1
         return res
