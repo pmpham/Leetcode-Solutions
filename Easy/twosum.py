@@ -9,4 +9,20 @@ def twoSum(self, nums: list[int], target: int) -> list[int]:
                 return ([i,values[compliment]])
             else:
                 values[nums[i]] = i
+
+#faster
+def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
+        i=0
+        seen={}
+        for i,x in enumerate(nums):
+            if target-x in seen:
+                return [i,seen[target-x]]
+            else:
+                seen[x] = i
                 
