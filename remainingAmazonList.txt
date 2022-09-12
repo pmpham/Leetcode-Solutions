@@ -2,8 +2,6 @@ Minimum Difficulty of a Job Schedule (71 times)
 
 Critical Connections in a Network (70 times)
 
-Merge k Sorted Lists (44 times)
-
 Longest Palindromic Substring (43 times)
 
 Subtree of Another Tree (41 times)
